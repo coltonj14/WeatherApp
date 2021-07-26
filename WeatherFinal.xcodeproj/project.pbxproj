@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		9752C25F26AE7FB800B0E327 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752C25E26AE7FB800B0E327 /* ContentView.swift */; };
 		9752C26126AE7FBA00B0E327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9752C26026AE7FBA00B0E327 /* Assets.xcassets */; };
 		9752C26426AE7FBA00B0E327 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9752C26326AE7FBA00B0E327 /* Preview Assets.xcassets */; };
+		9752C26C26AE800000B0E327 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752C26B26AE7FFF00B0E327 /* APIService.swift */; };
+		9752C26E26AE802000B0E327 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752C26D26AE802000B0E327 /* Forecast.swift */; };
+		9752C27126AE9AA100B0E327 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9752C27026AE9AA100B0E327 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,8 @@
 		9752C26026AE7FBA00B0E327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9752C26326AE7FBA00B0E327 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9752C26526AE7FBA00B0E327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9752C26B26AE7FFF00B0E327 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9752C26D26AE802000B0E327 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9752C27126AE9AA100B0E327 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +62,8 @@
 				9752C25E26AE7FB800B0E327 /* ContentView.swift */,
 				9752C26026AE7FBA00B0E327 /* Assets.xcassets */,
 				9752C26526AE7FBA00B0E327 /* Info.plist */,
+				9752C26B26AE7FFF00B0E327 /* APIService.swift */,
+				9752C26D26AE802000B0E327 /* Forecast.swift */,
 				9752C26226AE7FBA00B0E327 /* Preview Content */,
 			);
 			path = WeatherFinal;
@@ -85,6 +93,9 @@
 			dependencies = (
 			);
 			name = WeatherFinal;
+			packageProductDependencies = (
+				9752C27026AE9AA100B0E327 /* SDWebImageSwiftUI */,
+			);
 			productName = WeatherFinal;
 			productReference = 9752C25926AE7FB800B0E327 /* WeatherFinal.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +123,9 @@
 				Base,
 			);
 			mainGroup = 9752C25026AE7FB800B0E327;
+			packageReferences = (
+				9752C26F26AE9AA100B0E327 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 9752C25A26AE7FB800B0E327 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9752C26E26AE802000B0E327 /* Forecast.swift in Sources */,
 				9752C25F26AE7FB800B0E327 /* ContentView.swift in Sources */,
+				9752C26C26AE800000B0E327 /* APIService.swift in Sources */,
 				9752C25D26AE7FB800B0E327 /* WeatherFinalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +342,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9752C26F26AE9AA100B0E327 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9752C27026AE9AA100B0E327 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9752C26F26AE9AA100B0E327 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9752C25126AE7FB800B0E327 /* Project object */;
 }
